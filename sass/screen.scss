@@ -1,18 +1,32 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+ * 
+ * COMPASS MODULES (.sass/.scss files) ARE NOT STORED IN A REMOTE URL - AND NOT IN YOUR PROJECT FOLDER!
+ * It's also important to note that when importing compass modules (.sass/.scss files), the actual physical file 
+ * does not exist anywhere in your project folder. Instead, it's loaded from a remote URL which is predetermined by the
+ * COMPASS app - so don't try to locate "compass/reset" in your project folder, because it doesn't live there to begin with.
+ *
+ *
+ */
 
 
 // Compass Modules
-@import "compass/reset";
+@import "compass/reset";                 // Compass modules are grabbed from a remote URL (determined by the compass app) and do not reside in your project folder.
 
-// Modules and Variables
-@import "partials/base";
+// Common Modules
+@import "modules/all";                   // Include to get all modules.
+@import "modules/utility";
+@import "modules/colors";
 
-// partials
-// @import "partials/reset";
-// @import "partials/typography";
-// @import "partials/buttons";
-// @import "partials/figures";
-// @import "partials/grids";
+// Partials
+@import "partials/base";                 // Imports for all mixins and global project variables.
+@import "partials/reset";								 // Additional project-level reset styles to overwrite/compliment compass reset.
+@import "partials/typography";					 // Typography styles
+@import "partials/buttons";							 // Button styles
+@import "partials/grids";								 // Grid and layout styles.
+
+// Vendors															 // These include styles from third-party vendors (i.e. bootstrap, jQuery UI, Foundation).
+// @import "vendors/bootstrap";
+// @import "vendors/jquery-ui";
