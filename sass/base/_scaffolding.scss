@@ -1,0 +1,29 @@
+// "base/_scaffolding.scss"
+// Contains global base styles (i.e. body, div, span)
+
+/* base/scaffolding module loaded */
+
+// Reset box-sizing
+* {
+  @include box-sizing(border-box);
+}
+
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Setup Body Styles
+// This font-size sets up our rem-based font values to match their pixel equivalents. (i.e. 14px = 1.4rem)
+html {
+	font-size: 62.5%; 
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4rem;
+	line-height: 1.2rem;
+	color: #333;
+
+}

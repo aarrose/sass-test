@@ -12,21 +12,62 @@
  */
 
 
+// SASS Organization Tips:
+// Organize your SASS code in the following manner to avoid conflicts:
+// Source: http://css-tricks.com/sass-style-guide/
+// 
+// ├── List @extend(s)
+// ├── List "Regular" styles 
+// ├── List @include(s)
+// ├── List Nested selectors
+
+
+
 // Compass Modules
-@import "compass/reset";                 // Compass modules are grabbed from a remote URL (determined by the compass app) and do not reside in your project folder.
+//@import "compass/reset";                // Compass modules are grabbed from a remote URL (determined by the compass app) and do not reside in your project folder.
 
-// Common Modules
-@import "modules/all";                   // Include to get all modules.
-@import "modules/utility";
-@import "modules/colors";
 
-// Partials
-@import "partials/base";                 // Imports for all mixins and global project variables.
-@import "partials/reset";								 // Additional project-level reset styles to overwrite/compliment compass reset.
-@import "partials/typography";					 // Typography styles
-@import "partials/buttons";							 // Button styles
-@import "partials/grids";								 // Grid and layout styles.
+// Core Variables
+@import "utility/variables";							// All variables are contained in this file, since they need to be visible/accessible to all other files.								
 
-// Vendors															 // These include styles from third-party vendors (i.e. bootstrap, jQuery UI, Foundation).
-// @import "vendors/bootstrap";
-// @import "vendors/jquery-ui";
+
+// Core Mixins
+@import "utility/mixins";									// Import all mixins used for this site.
+
+
+// Utility Styles 												// Utility SASS that is not outputted
+// @import "utility/utility";
+// @import "utility/extends";
+@import "utility/colors";
+
+
+// Base Styles 													// Generic styles that are not attached to specific modules/components
+// @import "base/reset";
+@import "base/normalize";               // Contains element-based global reset/normalize styles (i.e. html, body, <HTML5 Tags>)
+@import "base/typography";							// Global typographic styles
+// @import "base/print";
+@import "base/scaffolding";							// Global scaffolding (high-level body/page) styles
+
+
+// Layout
+@import "layout/grid";									// Grid system
+// @import "layout/header";
+// @import "layout/footer";
+
+// Page-Specific
+// @import "pages/home";
+// @import "pages/products";
+// @import "pages/services";
+// @import "pages/about";
+// @import "pages/contact";
+
+// Components
+// @import "components/buttons";
+// @import "components/figures";
+// @import "components/forms";
+// @import "components/module(x)";
+// 
+
+// Vendor
+// @import "vendor/bootstrap-sass";
+// @import "vendor/jquery-ui";

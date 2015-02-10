@@ -1,0 +1,123 @@
+// "utility/_variables.scss"
+// It's important how you order imported files in your main .scss stylesheet. This is especially true for files containing variable declarations, since they will only be visible/accessible to files imported after/below them. Because of this, it is recommended you place all of your variables in a single file and make them one of the first imported files in your main .scss file.
+// 
+
+/* utility/variables module loaded */
+
+
+// === Colors ===
+// These are gray and branded colors that will be used across the entire site.
+
+// Primary (ditech) colors
+$ditech-blue: 					#0077C8;
+$ditech-green: 					#1db04a;
+$ditech-pink: 					#d52259;
+
+// Gray Colors
+$gray-base: 						#000 !default;  											// !default means "assign this value as long as no other values currently exist for this variable."
+$gray-darker: 					lighten($gray-base, 13.5%) !default; 	// #222
+$gray-dark:   					lighten($gray-base, 20%) !default;   	// #333
+$gray:        					lighten($gray-base, 33.5%) !default; 	// #555
+$gray-light:  					lighten($gray-base, 46.7%) !default; 	// #777
+$gray-lighter:					lighten($gray-base, 93.5%) !default;	// #eee
+
+$brand-primary: 				$ditech-blue !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+
+
+
+// === Scaffolding ===
+// Settings for most global styles.
+
+// Body bg color
+$body-bg:								#fff !default;
+
+// Global text color
+$text-color: 						$gray-dark !default;
+
+// Global link color
+$link-color:						$brand-primary !default;
+
+// Global link hover color
+$link-hover-color:			darken($brand-primary, 15%) !default;
+
+// Global link hover decoration
+$link-hover-decoration: underline !default;
+
+
+
+
+// === Typography ===
+
+// === Iconography ===
+
+// === Components ===
+
+// === Tables ===
+
+// === Buttons ===
+
+// === Forms ===
+
+// === Dropdowns ===
+
+// === Media Query Breakpoints ===
+
+// === Grid System ===
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;
+
+// $row-width: rem-calc(1000);
+// $total-columns: 12;
+// $column-gutter: rem-calc(30);
+
+
+// === Container Sizes ===
+
+// === Navbar ===
+
+// === Navs ===
+
+// === Pagination ===
+
+// === Pager ===
+
+// === Banner ===
+
+// === Form States and Alerts ===
+
+// === Tooltips ===
+
+// === Popovers ===
+
+// === Labels ===
+
+// === Modals ===
+
+// === Alerts ===
+
+// === Progress Bars ===
+
+// === List Group ===
+
+// === Panels ===
+
+// === Thumbnails ===
+
+// === Wells ===
+
+// === Badges ===
+
+// === Breadcrumbs ===
+
+// === Carousel ===
+
+// === Close ===
+
+// === Code ===
+
+// === Type ===
