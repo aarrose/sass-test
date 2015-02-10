@@ -3,6 +3,26 @@
 
 
 // Grid Functions
+//
+// @variables
+//
+$include-html-grid-classes: $include-html-classes !default;
+$include-xl-html-grid-classes: false !default;
+
+$row-width: rem-calc(1000) !default;
+$total-columns: 12 !default;
+
+$last-child-float: $opposite-direction !default;
+
+//
+// Grid Functions
+//
+
+// Deprecated: We'll drop support for this in 5.1, use grid-calc()
+@function gridCalc($colNumber, $totalColumns) {
+  @warn "gridCalc() is deprecated, use grid-calc()";
+  @return grid-calc($colNumber, $totalColumns);
+}
 
 // @FUNCTION
 // $colNumber - Found in settings file
