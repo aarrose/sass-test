@@ -1,11 +1,9 @@
-// "utility/_variables.scss"
+// "_simple-variables.scss"
 // It's important how you order imported files in your main .scss stylesheet. This is especially true for files containing variable declarations, since they will only be visible/accessible to files imported after/below them. Because of this, it is recommended you place all of your variables in a single file and make them one of the first imported files in your main .scss file.
 // 
 
-/* utility/variables module loaded */
+/* _simple-variables loaded */
 
-// === Global Variables ===
-$include-html-classes: true !default;
 
 // === Colors ===
 // These are gray and branded colors that will be used across the entire site.
@@ -50,17 +48,7 @@ $link-hover-color:			darken($brand-primary, 15%) !default;
 // Global link hover decoration
 $link-hover-decoration: underline !default;
 
-// We use these to control text direction settings
-$text-direction: ltr !default;
-$default-float: left !default;
-$opposite-direction: right !default;
-@if $text-direction == ltr {
-  $default-float: left;
-  $opposite-direction: right;
-} @else {
-  $default-float: right;
-  $opposite-direction: left;
-}
+
 
 
 // === Typography ===

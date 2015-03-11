@@ -1,0 +1,18 @@
+{
+  "name": "sass-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/aarrose/sass-test",
+  "description": "This is a simple SASS demo",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "holderjs": "~2.5.2"
+  }
+}

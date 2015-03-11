@@ -10,33 +10,30 @@
  *
  *
  */
+/* utility/functions module loaded */
 /* utility/variables module loaded */
 /* utility/mixins module loaded */
 /* mixins/vendor-prefixes module loaded */
 /* Colors loaded */
 /* base/normalize module loaded */
-/* line 7, ../../sass/base/_normalize.scss */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 12, ../../sass/base/_normalize.scss */
 body {
   margin: 0;
 }
 
 /* base/typography module loaded */
 /* base/scaffolding module loaded */
-/* line 7, ../../sass/base/_scaffolding.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 11, ../../sass/base/_scaffolding.scss */
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -44,12 +41,10 @@ body {
   box-sizing: border-box;
 }
 
-/* line 19, ../../sass/base/_scaffolding.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 23, ../../sass/base/_scaffolding.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
@@ -58,7 +53,6 @@ body {
 }
 
 /* layout/grid module loaded */
-/* line 18, ../../sass/layout/_grid.scss */
 .row {
   width: 100%;
   margin-left: auto;
@@ -68,32 +62,27 @@ body {
   max-width: 62.5rem;
 }
 
-/* line 26, ../../sass/layout/_grid.scss */
 .row:before,
 .row:after {
   content: " ";
   display: table;
 }
 
-/* line 31, ../../sass/layout/_grid.scss */
 .row:after {
   clear: both;
 }
 
-/* line 34, ../../sass/layout/_grid.scss */
 .row.collapse > .column,
 .row.collapse > .columns {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 39, ../../sass/layout/_grid.scss */
 .row.collapse .row {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 43, ../../sass/layout/_grid.scss */
 .row .row {
   width: auto;
   margin-left: -0.9375rem;
@@ -103,38 +92,32 @@ body {
   max-width: none;
 }
 
-/* line 51, ../../sass/layout/_grid.scss */
 .row .row:before,
 .row .row:after {
   content: " ";
   display: table;
 }
 
-/* line 56, ../../sass/layout/_grid.scss */
 .row .row:after {
   clear: both;
 }
 
-/* line 59, ../../sass/layout/_grid.scss */
 .row .row.collapse {
   width: auto;
   margin: 0;
   max-width: none;
 }
 
-/* line 64, ../../sass/layout/_grid.scss */
 .row .row.collapse:before,
 .row .row.collapse:after {
   content: " ";
   display: table;
 }
 
-/* line 69, ../../sass/layout/_grid.scss */
 .row .row.collapse:after {
   clear: both;
 }
 
-/* line 72, ../../sass/layout/_grid.scss */
 .column,
 .columns {
   padding-left: 0.9375rem;
@@ -143,12 +126,10 @@ body {
   float: left;
 }
 
-/* line 79, ../../sass/layout/_grid.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: right;
 }
 
-/* line 82, ../../sass/layout/_grid.scss */
 [class*="column"] + [class*="column"].end {
   float: left;
 }

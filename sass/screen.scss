@@ -26,6 +26,8 @@
 // Compass Modules
 //@import "compass/reset";                // Compass modules are grabbed from a remote URL (determined by the compass app) and do not reside in your project folder.
 
+// Core Functions
+@import "utility/functions";
 
 // Core Variables
 @import "utility/variables";							// All variables are contained in this file, since they need to be visible/accessible to all other files.								

@@ -1,0 +1,401 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+ * 
+ * COMPASS MODULES (.sass/.scss files) ARE NOT STORED IN A REMOTE URL - AND NOT IN YOUR PROJECT FOLDER!
+ * It's also important to note that when importing compass modules (.sass/.scss files), the actual physical file 
+ * does not exist anywhere in your project folder. Instead, it's loaded from a remote URL which is predetermined by the
+ * COMPASS app - so don't try to locate "compass/reset" in your project folder, because it doesn't live there to begin with.
+ *
+ *
+ */
+
+// SASS Organization Tips:
+// Organize your SASS code in the following manner to avoid conflicts:
+// Source: http://css-tricks.com/sass-style-guide/
+// 
+// ├── List @extend(s)
+// ├── List "Regular" styles 
+// ├── List @include(s)
+// ├── List Nested selectors
+// Compass Modules
+//@import "compass/reset";                // Compass modules are grabbed from a remote URL (determined by the compass app) and do not reside in your project folder.
+// Core Functions
+@import "simple-functions";
+// Core Variables
+@import "simple-variables"; // All variables are contained in this file, since they need to be visible/accessible to all other files.								
+// Core Mixins
+@import "simple-mixins";
+// Utility Styles 												// Utility SASS that is not outputted
+// @import "utility/utility";
+// @import "utility/extends";
+//@import "utility/colors";
+// Base Styles 													// Generic styles that are not attached to specific modules/components
+//@import "base/normalize";               // Contains element-based global reset/normalize styles (i.e. html, body, <HTML5 Tags>)
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+//@import "base/typography";							// Global typographic styles
+// @import "base/print";
+
+
+/*** SCAFFOLDING ***/
+//@import "base/scaffolding";							// Global scaffolding (high-level body/page) styles
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+// Setup Body Styles
+// This font-size sets up our rem-based font values to match their pixel equivalents. (i.e. 14px = 1.4rem)
+html {
+	font-size: 62.5%; 
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4rem;
+	line-height: 1.2rem;
+	color: #333;
+}
+
+
+
+
+// Layout
+
+
+/*** GRID ***/
+//@import "layout/grid";									// Grid system
+// This is my own attempt at re-creating Zurb Foundation's grid system using SASS.
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row.collapse > .column,
+.row.collapse > .columns {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row.collapse .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row .row {
+  width: auto;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+}
+.row .row:before,
+.row .row:after {
+  content: " ";
+  display: table;
+}
+.row .row:after {
+  clear: both;
+}
+.row .row.collapse {
+  width: auto;
+  margin: 0;
+  max-width: none;
+}
+.row .row.collapse:before,
+.row .row.collapse:after {
+  content: " ";
+  display: table;
+}
+.row .row.collapse:after {
+  clear: both;
+}
+.column,
+.columns {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+[class*="column"] + [class*="column"]:last-child {
+  float: right;
+}
+[class*="column"] + [class*="column"].end {
+  float: left;
+}
+@media only screen {
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+  .small-1 {
+    width: 8.33333%;
+  }
+  .small-2 {
+    width: 16.66667%;
+  }
+  .small-3 {
+    width: 25%;
+  }
+  .small-4 {
+    width: 33.33333%;
+  }
+  .small-5 {
+    width: 41.66667%;
+  }
+  .small-6 {
+    width: 50%;
+  }
+  .small-7 {
+    width: 58.33333%;
+  }
+  .small-8 {
+    width: 66.66667%;
+  }
+  .small-9 {
+    width: 75%;
+  }
+  .small-10 {
+    width: 83.33333%;
+  }
+  .small-11 {
+    width: 91.66667%;
+  }
+  .small-12 {
+    width: 100%;
+  }
+  .small-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left;
+  }
+  .column.small-centered,
+  .columns.small-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .column.small-uncentered,
+  .columns.small-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left;
+  }
+  .column.small-centered:last-child,
+  .columns.small-centered:last-child {
+    float: none;
+  }
+  .column.small-uncentered:last-child,
+  .columns.small-uncentered:last-child {
+    float: left;
+  }
+  .column.small-uncentered.opposite,
+  .columns.small-uncentered.opposite {
+    float: right;
+  }
+  .row.small-collapse > .column,
+  .row.small-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row.small-collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row.small-uncollapse > .column,
+  .row.small-uncollapse > .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+  .medium-1 {
+    width: 8.33333%;
+  }
+  .medium-2 {
+    width: 16.66667%;
+  }
+  .medium-3 {
+    width: 25%;
+  }
+  .medium-4 {
+    width: 33.33333%;
+  }
+  .medium-5 {
+    width: 41.66667%;
+  }
+  .medium-6 {
+    width: 50%;
+  }
+  .medium-7 {
+    width: 58.33333%;
+  }
+  .medium-8 {
+    width: 66.66667%;
+  }
+  .medium-9 {
+    width: 75%;
+  }
+  .medium-10 {
+    width: 83.33333%;
+  }
+  .medium-11 {
+    width: 91.66667%;
+  }
+  .medium-12 {
+    width: 100%;
+  }
+  .row.medium-collapse > .column,
+  .row.medium-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row.medium-collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row.medium-uncollapse > .column,
+  .row.medium-uncollapse > .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+  .large-1 {
+    width: 8.33333%;
+  }
+  .large-2 {
+    width: 16.66667%;
+  }
+  .large-3 {
+    width: 25%;
+  }
+  .large-4 {
+    width: 33.33333%;
+  }
+  .large-5 {
+    width: 41.66667%;
+  }
+  .large-6 {
+    width: 50%;
+  }
+  .large-7 {
+    width: 58.33333%;
+  }
+  .large-8 {
+    width: 66.66667%;
+  }
+  .large-9 {
+    width: 75%;
+  }
+  .large-10 {
+    width: 83.33333%;
+  }
+  .large-11 {
+    width: 91.66667%;
+  }
+  .large-12 {
+    width: 100%;
+  }
+
+  .large-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left;
+  }
+  .row.large-collapse > .column,
+  .row.large-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row.large-collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row.large-uncollapse > .column,
+  .row.large-uncollapse > .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+}
+// @import "layout/header";
+// @import "layout/footer";
+// Page-Specific
+// @import "pages/home";
+// @import "pages/products";
+// @import "pages/services";
+// @import "pages/about";
+// @import "pages/contact";
+// Components
+// @import "components/buttons";
+// @import "components/figures";
+// @import "components/forms";
+// @import "components/module(x)";
+// 
+// Vendor
+// @import "vendor/bootstrap-sass";
+// @import "vendor/jquery-ui";
+
+
+/*** Begin Main Styles ***/
+
+// Header
+.header {
+
+}
+
+.nav ul li {
+	display: inline-block;
+}
